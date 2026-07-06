@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HeartBeats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link  href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600&display=swap" 
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <main class="wrap">
+    <section class="card split">
+      <div class="left">
+        <h1 id="title">Chào Công Chúa</h1>
+
+        <div class="typingWrap">
+          <div id="typed" class="typed" aria-live="polite"></div>
+        </div>
+
+        <p class="hint">
+          ☞ Cào cái thẻ đeeee
+        </p>
+      </div>
+
+      <div class="right">
+        <div class="scratchCard">
+          <img 
+            id="revealImg" 
+            src="./couple.jpg" 
+            alt="Ảnh bất ngờ"
+            draggable="false"
+          >
+          <canvas id="scratch"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="passcodeModal" class="passcode-overlay" role="dialog" aria-modal="true">
+    <div class="passcode-card">
+      <h2 class="passcode-title">Sinh nhật của chị😉</h2>
+
+      <div class="passcode-dots" aria-label="Mã đã nhập">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="numpad">
+        <button class="num-btn" data-val="1">1</button>
+        <button class="num-btn" data-val="2">2</button>
+        <button class="num-btn" data-val="3">3</button>
+        <button class="num-btn" data-val="4">4</button>
+        <button class="num-btn" data-val="5">5</button>
+        <button class="num-btn" data-val="6">6</button>
+        <button class="num-btn" data-val="7">7</button>
+        <button class="num-btn" data-val="8">8</button>
+        <button class="num-btn" data-val="9">9</button>
+
+        <div class="num-btn empty" aria-hidden="true"></div>
+
+        <button class="num-btn" data-val="0">0</button>
+        <button 
+          class="num-btn delete-btn" 
+          id="btnDelete" 
+          aria-label="Xóa số"
+        >
+          ✕
+        </button>
+      </div>
+
+      <p class="passcode-hint">
+        Gợi ý: Ngày / Tháng (4 số)
+      </p>
+    </div>
+  </div>
+
+  <audio id="audio" preload="auto">
+    <source src="./nhac.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
